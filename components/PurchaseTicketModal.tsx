@@ -36,13 +36,19 @@ export function PurchaseTicketModal({ draw, user, onClose, onPurchase }: Purchas
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-      <div className="card max-w-md w-full">
+    <div 
+      className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fade-in"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <div className="card max-w-md w-full animate-scale-in">
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl font-bold text-white">Purchase Tickets</h2>
+          <h2 id="modal-title" className="text-2xl font-bold text-white">Purchase Tickets</h2>
           <button
             onClick={onClose}
-            className="p-2 text-white/60 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+            className="p-2 text-white/60 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200 focus:ring-2 focus:ring-white/50 focus:outline-none"
+            aria-label="Close modal"
           >
             <X size={20} />
           </button>
