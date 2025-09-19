@@ -9,8 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@coinbase/minikit": "^0.1.0",
-    "@coinbase/onchainkit": "^0.32.0",
+    "@coinbase/wallet-sdk": "^4.3.7",
     "next": "15.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

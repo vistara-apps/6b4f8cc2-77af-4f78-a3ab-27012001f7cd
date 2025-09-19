@@ -36,19 +36,19 @@ export function DrawDashboard() {
   return (
     <div className="space-y-6">
       {/* Hero Section */}
-      <div className="text-center py-8">
-        <h1 className="text-4xl font-bold text-white mb-4">
+      <div className="text-center py-6 sm:py-8 px-4 animate-fade-in">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 animate-slide-up">
           Blockchain-Verified Fair Draw
         </h1>
-        <p className="text-white/80 text-lg max-w-2xl mx-auto">
+        <p className="text-white/80 text-base sm:text-lg max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: '0.2s' }}>
           Participate in transparent, blockchain-verified lottery draws with instant payouts
         </p>
       </div>
 
       {/* Active Draw Section */}
       {activeDraw && (
-        <div className="grid lg:grid-cols-3 gap-6">
-          <div className="lg:col-span-2 space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="lg:col-span-2 space-y-4 sm:space-y-6">
             <DrawCard
               draw={activeDraw}
               onPurchaseTicket={() => {
@@ -77,7 +77,7 @@ export function DrawDashboard() {
             </div>
           </div>
           
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6 order-first lg:order-last">
             <AnalyticsPanel draws={draws} />
             <ParticipantsList drawId={activeDraw.drawId} />
           </div>
@@ -87,8 +87,8 @@ export function DrawDashboard() {
       {/* Upcoming Draws */}
       {upcomingDraws.length > 0 && (
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-white">Upcoming Draws</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <h2 className="text-xl sm:text-2xl font-semibold text-white px-4 sm:px-0">Upcoming Draws</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {upcomingDraws.map(draw => (
               <DrawCard
                 key={draw.drawId}

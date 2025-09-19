@@ -6,11 +6,25 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 2,
-  }).format(amount);
+  // Format as ETH with appropriate decimal places
+  if (amount >= 1) {
+    return `${amount.toFixed(2)} ETH`;
+  } else if (amount >= 0.01) {
+    return `${amount.toFixed(3)} ETH`;
+  } else if (amount >= 0.001) {
+    return `${amount.toFixed(4)} ETH`;
+  } else {
+    return `${amount.toFixed(6)} ETH`;
+  }
+}
+
+export function formatCurrencyCompact(amount: number): string {
+  // More compact formatting for smaller displays
+  if (amount >= 1) {
+    return `${amount.toFixed(1)}Ξ`;
+  } else {
+    return `${amount.toFixed(3)}Ξ`;
+  }
 }
 
 export function formatTimeRemaining(endTime: Date): string {
