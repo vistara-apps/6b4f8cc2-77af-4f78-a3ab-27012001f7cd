@@ -4,14 +4,22 @@ export const MAX_TICKET_PRICE = 1.0; // ETH
 export const PLATFORM_FEE_PERCENTAGE = 5; // 5% platform fee
 export const MAX_TICKETS_PER_DRAW = 1000;
 
+// USDC Token Configuration on Base
+export const USDC_TOKEN_ADDRESS = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913';
+export const USDC_DECIMALS = 6; // USDC has 6 decimal places
+
+// Payment Configuration
+export const PAYMENT_TIMEOUT = 30000; // 30 seconds
+export const CONFIRMATION_BLOCKS = 1; // Number of blocks to wait for confirmation
+
 export const MOCK_DRAWS = [
   {
     drawId: '1',
     startTime: new Date(Date.now() - 6 * 60 * 60 * 1000), // Started 6 hours ago
     endTime: new Date(Date.now() + 6 * 60 * 60 * 1000), // Ends in 6 hours
     status: 'active' as const,
-    prizePool: 7.59,
-    ticketPrice: 0.01,
+    prizePool: 759, // USDC amount (759 USDC)
+    ticketPrice: 1, // 1 USDC per ticket
     maxTickets: 1000,
     soldTickets: 759,
   },
@@ -21,7 +29,7 @@ export const MOCK_DRAWS = [
     endTime: new Date(Date.now() + 18 * 60 * 60 * 1000), // Ends in 18 hours
     status: 'pending' as const,
     prizePool: 0,
-    ticketPrice: 0.005,
+    ticketPrice: 0.5, // 0.5 USDC per ticket
     maxTickets: 500,
     soldTickets: 0,
   },

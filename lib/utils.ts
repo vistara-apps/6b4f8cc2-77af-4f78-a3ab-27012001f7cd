@@ -13,6 +13,19 @@ export function formatCurrency(amount: number): string {
   }).format(amount);
 }
 
+export function formatUSDC(amount: number): string {
+  return `${amount.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 6,
+  })} USDC`;
+}
+
+export function formatBalance(amount: number): string {
+  if (amount === 0) return '0.00 USDC';
+  if (amount < 0.01) return '<0.01 USDC';
+  return formatUSDC(amount);
+}
+
 export function formatTimeRemaining(endTime: Date): string {
   const now = new Date();
   const diff = endTime.getTime() - now.getTime();

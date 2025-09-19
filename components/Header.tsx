@@ -1,13 +1,9 @@
 'use client';
 
-import { useMiniKit } from '@coinbase/minikit';
-import { useAuthenticate } from '@coinbase/onchainkit/minikit';
-import { User, Bell, Settings } from 'lucide-react';
-import { shortenAddress } from '@/lib/utils';
+import { Bell, Settings } from 'lucide-react';
+import { WalletConnect } from './WalletConnect';
 
 export function Header() {
-  const { context } = useMiniKit();
-  const { user } = useAuthenticate();
 
   return (
     <header className="bg-white/10 backdrop-blur-md border-b border-white/20 px-6 py-4">
@@ -26,19 +22,7 @@ export function Header() {
             <Settings size={20} />
           </button>
           
-          <div className="flex items-center space-x-3 bg-white/10 rounded-lg px-3 py-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center">
-              <User size={16} className="text-white" />
-            </div>
-            <div className="text-sm">
-              <div className="text-white font-medium">
-                {context?.user?.displayName || 'Player'}
-              </div>
-              <div className="text-white/60">
-                {user?.address ? shortenAddress(user.address) : 'Connect Wallet'}
-              </div>
-            </div>
-          </div>
+          <WalletConnect />
         </div>
       </div>
     </header>
