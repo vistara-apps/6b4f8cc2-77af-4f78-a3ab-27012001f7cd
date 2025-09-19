@@ -1,0 +1,30 @@
+{
+  "accountAssociation": {
+    "header": "",
+    "payload": "",
+    "signature": ""
+  },
+  "frame": {
+    "version": "1",
+    "name": "ChainDraw Duel",
+    "subtitle": "Built with Zara",
+    "description": "ChainDraw Duel is a Base Mini App built with Zara.",
+    "iconUrl": "https://0co.to/images/zara-2.png",
+    "homeUrl": "https://6b4f8cc277af4f78a3ab27012001f7cd-2rqx.vercel.app",
+    "splashImageUrl": "https://6b4f8cc277af4f78a3ab27012001f7cd-2rqx.vercel.app/splash.png",
+    "splashBackgroundColor": "#000000",
+    "heroImageUrl": "https://6b4f8cc277af4f78a3ab27012001f7cd-2rqx.vercel.app/image.png",
+    "tagline": "ChainDraw Duel",
+    "screenshotUrls": [
+      "https://6b4f8cc277af4f78a3ab27012001f7cd-2rqx.vercel.app/screenshot.png",
+      "https://6b4f8cc277af4f78a3ab27012001f7cd-2rqx.vercel.app/screenshot.png"
+    ],
+    "primaryCategory": "social",
+    "tags": [
+      "base",
+      "miniapp",
+      "onchainkit"
+    ],
+    "webhookUrl": "https://6b4f8cc277af4f78a3ab27012001f7cd-2rqx.vercel.app/api/webhook"
+  }
+}

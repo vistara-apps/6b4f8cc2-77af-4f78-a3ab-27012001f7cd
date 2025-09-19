@@ -1,0 +1,14 @@
+{
+  "name": "ChainDraw Duel",
+  "description": "ChainDraw Duel is a Base Mini App built with Zara.",
+  "image": "https://dummyimage.com/1200x628/0a0b0d/ffffff.png&text=OG",
+  "external_url": "https://6b4f8cc2-77af-4f78-a3ab-27012001f7cd.vercel.app",
+  "properties": {
+    "app": {
+      "name": "ChainDraw Duel",
+      "description": "ChainDraw Duel is a Base Mini App built with Zara.",
+      "url": "https://6b4f8cc2-77af-4f78-a3ab-27012001f7cd.vercel.app",
+      "icon": "https://0co.to/images/zara-2.png"
+    }
+  }
+}
